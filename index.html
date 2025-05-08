@@ -29,7 +29,7 @@
 
     .emoji {
       position: absolute;
-      font-size: 2.5em;
+      font-size: 3em;
       animation: float 4s ease-in-out infinite;
       opacity: 0.9;
     }
@@ -39,13 +39,6 @@
       50% { transform: translateY(-50px); opacity: 1; }
       100% { transform: translateY(0); }
     }
-
-    .emoji:nth-child(1) { top: 40px; left: 20%; animation-delay: 0s; }
-    .emoji:nth-child(2) { top: 100px; left: 70%; animation-delay: 0.4s; }
-    .emoji:nth-child(3) { top: 200px; left: 30%; animation-delay: 0.8s; }
-    .emoji:nth-child(4) { top: 300px; left: 60%; animation-delay: 1.2s; }
-    .emoji:nth-child(5) { top: 150px; left: 80%; animation-delay: 1.6s; }
-    .emoji:nth-child(6) { top: 250px; left: 10%; animation-delay: 2s; }
 
     button {
       font-size: 1.5em;
@@ -96,20 +89,17 @@
         newTab.document.body.style.height = "100vh";
         newTab.document.body.innerHTML = `
           <h1>Agora que você clicou, você também vai ter que mamar</h1>
-          <div class="emoji">😂</div>
-          <div class="emoji">😂</div>
-          <div class="emoji">😂</div>
-           <div class="emoji">😂</div>
-          <div class="emoji">😂</div>
-          <div class="emoji">😂</div>
-           <div class="emoji">😂</div>
-          <div class="emoji">😂</div>
-          <div class="emoji">😂</div>
-           <div class="emoji">😂</div>
-          <div class="emoji">😂</div>
-          <div class="emoji">😂</div>
-          <!-- Adicione os outros emojis aqui, conforme necessário -->
         `;
+
+        // Criar 50 emojis de riso
+        for (let i = 0; i < 50; i++) {
+          const emoji = newTab.document.createElement("div");
+          emoji.classList.add("emoji");
+          emoji.textContent = "😂";
+          emoji.style.top = `${Math.random() * 90}vh`;
+          emoji.style.left = `${Math.random() * 90}vw`;
+          newTab.document.body.appendChild(emoji);
+        }
 
         // Estiliza os emojis na nova aba
         const style = newTab.document.createElement('style');
