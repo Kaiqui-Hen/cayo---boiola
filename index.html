@@ -1,109 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Cayo é um Boiolinha Muito Lindo</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: linear-gradient(45deg, #ff69b4, #ff1493, #00bfff, #ff6347);
-            background-size: 400% 400%;
-            animation: gradient 5s ease infinite;
-            position: relative; /* Adicionando position relative ao body */
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O Cayo é um Boiolinha Muito Lindo</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(to bottom, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+      position: relative;
+    }
 
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
+    h1 {
+      font-size: 3em;
+      color: white;
+      position: relative;
+      z-index: 1;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    }
 
-        h1 {
-            font-size: 3em;
-            color: white;
-            position: relative;
-            z-index: 1;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
-        }
+    .emoji {
+      position: absolute;
+      font-size: 2.5em;
+      animation: float 4s ease-in-out infinite;
+      opacity: 0.9;
+    }
 
-        .heart {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            background-color: red;
-            clip-path: polygon(50% 0%, 0% 35%, 50% 100%, 100% 35%);
-            animation: float 4s ease-in-out infinite;
-            opacity: 0.8;
-        }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-50px); opacity: 1; }
+      100% { transform: translateY(0); }
+    }
 
-        @keyframes float {
-            0% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-50px);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        /* Posicionando os corações com base em posições relativas */
-        .heart:nth-child(1) {
-            top: 50px;
-            left: 30%;
-            animation-delay: 0s;
-        }
-
-        .heart:nth-child(2) {
-            top: 120px;
-            left: 70%;
-            animation-delay: 0.5s;
-        }
-
-        .heart:nth-child(3) {
-            top: 200px;
-            left: 20%;
-            animation-delay: 1s;
-        }
-
-        .heart:nth-child(4) {
-            top: 250px;
-            left: 40%;
-            animation-delay: 1.5s;
-        }
-
-        .heart:nth-child(5) {
-            top: 300px;
-            left: 80%;
-            animation-delay: 2s;
-        }
-
-        /* Adicionar mais corações se quiser */
-    </style>
+    .emoji:nth-child(1) { top: 40px; left: 20%; animation-delay: 0s; }
+    .emoji:nth-child(2) { top: 100px; left: 70%; animation-delay: 0.4s; }
+    .emoji:nth-child(3) { top: 200px; left: 30%; animation-delay: 0.8s; }
+    .emoji:nth-child(4) { top: 300px; left: 60%; animation-delay: 1.2s; }
+    .emoji:nth-child(5) { top: 150px; left: 80%; animation-delay: 1.6s; }
+    .emoji:nth-child(6) { top: 250px; left: 10%; animation-delay: 2s; }
+  </style>
 </head>
 <body>
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <!-- Você pode adicionar mais corações se quiser -->
-    <h1>TA OLHANDO PORQUE QUER ME DAR</h1>
+  <!-- Emojis engraçados -->
+  <div class="emoji">🐸</div>
+  <div class="emoji">🤡</div>
+  <div class="emoji">🐷</div>
+  <div class="emoji">💩</div>
+  <div class="emoji">🦄</div>
+  <div class="emoji">🧠</div>
+
+  <!-- Mensagem principal -->
+  <h1>EI CAYO, TA ME OLHANDO PORQUE QUER ME DAR</h1>
+
+  <!-- Som engraçado -->
+  <audio autoplay>
+    <source src="https://www.myinstants.com/media/sounds/fbi-open-up-sfx.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
 </body>
 </html>
