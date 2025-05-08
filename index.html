@@ -46,6 +46,22 @@
     .emoji:nth-child(4) { top: 300px; left: 60%; animation-delay: 1.2s; }
     .emoji:nth-child(5) { top: 150px; left: 80%; animation-delay: 1.6s; }
     .emoji:nth-child(6) { top: 250px; left: 10%; animation-delay: 2s; }
+
+    button {
+      font-size: 1.5em;
+      padding: 15px 30px;
+      background-color: #ff4c4c;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 30px;
+    }
+
+    button:hover {
+      background-color: #ff1c1c;
+    }
   </style>
 </head>
 <body>
@@ -58,13 +74,32 @@
   <div class="emoji">🧠</div>
 
   <!-- Mensagem principal -->
-  <h1>EI CAYO, TA ME OLHANDO PORQUE QUER ME DAR</h1>
+  <h1>O CAYO É UM BOIOLINHA MUITO LINDO</h1>
+
+  <!-- Botão -->
+  <button onclick="openNewTab()">Não clique aqui</button>
+
+  <script>
+    function openNewTab() {
+      // Abre uma nova aba
+      const newTab = window.open("", "_blank");
+
+      // Define o conteúdo da nova aba
+      newTab.document.body.style.backgroundColor = "black";
+      newTab.document.body.style.color = "white";
+      newTab.document.body.style.fontFamily = "'Arial', sans-serif";
+      newTab.document.body.style.display = "flex";
+      newTab.document.body.style.justifyContent = "center";
+      newTab.document.body.style.alignItems = "center";
+      newTab.document.body.style.height = "100vh";
+      newTab.document.body.innerHTML = "<h1>Agora que você clicou, você também vai ter que mamar</h1>";
+    }
+  </script>
 
   <!-- Som engraçado -->
   <audio autoplay>
-  <source src="audio/fbi-open-up-sfx.mp3" type="audio/mpeg">
-  Seu navegador não suporta áudio.
-</audio>
-
+    <source src="https://www.myinstants.com/media/sounds/fbi-open-up-sfx.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
 </body>
 </html>
